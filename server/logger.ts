@@ -1,7 +1,7 @@
 const { createLogger, format, transports } = require('winston');
 const { label, combine, timestamp , prettyPrint } = format;
 
-const fileName = 'requestlog.log';	
+const fileName = '../logs/requestlog.log';	
 
 const logger = createLogger({
   format: combine(

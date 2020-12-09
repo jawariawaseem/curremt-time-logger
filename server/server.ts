@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 
 app.get('/api/getlogs', (request:any,response:any) => {
-	fs.readFile('requestlog.log', 'utf8',(error:any, data:any) => {
+	fs.readFile('../logs/requestlog.log', 'utf8',(error:any, data:any) => {
 		if (error) {
 			console.error(error);
 			return;

@@ -8,7 +8,7 @@ var app = express();
 var port = process.env.PORT || 5000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/api/getlogs', function (request, response) {
-    fs.readFile('requestlog.log', 'utf8', function (error, data) {
+    fs.readFile('../logs/requestlog.log', 'utf8', function (error, data) {
         if (error) {
             console.error(error);
             return;
