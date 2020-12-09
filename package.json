@@ -1,0 +1,23 @@
+{
+  "name": "current-time-logger",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node index.js",
+    "client": "npm run start --prefix client",
+    "server": "nodemon server/server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "tsc": "tsc"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.9",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "log-to-file": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/winston": "^2.4.4",
+    "concurrently": "^4.1.2",
+    "typescript": "^4.1.2"
+  }
+}
