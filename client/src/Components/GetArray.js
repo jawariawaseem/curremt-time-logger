@@ -6,7 +6,7 @@ const GetArray = () => {
 	for (var i=0, t=arraySize; i<t; i++) {
 		array.push(Math.round(Math.random() * t));
 	}
-	var formattedArray = array.toString();
+	// var formattedArray = array.toString();
 
 	const getLargestValue = (array) => {
 		array = [-2,-1,-4,-6,-3,-7]
@@ -23,12 +23,17 @@ const GetArray = () => {
 		}
 		return [largest,secondLargest];
 	}
+	for (var i = 0; i < array.length; i++) {
+  			array[i] = " " + array[i] + "\n";
+	}
+	array = array.join("");
+
 	return(
 		<div className="array">
 			<p>Find largest and second largest element of array!</p>
 			<input placeholder="Size of array" type="text" onChange={(e) => {setArraySize(e.target.value)}}/>
 			<br></br>
-			<p>{formattedArray}</p>{
+			<div>{array}</div>{
 				getLargestValue(array).map((value,index) => { return(<h3 key={index}>{value}</h3>) })
 			}
 		</div>

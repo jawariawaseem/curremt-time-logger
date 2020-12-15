@@ -74,6 +74,11 @@
   margin: 8px 0;
   font-size: 25px;
 }
+.format-array{
+  height: 40px;
+  width: 200px;
+  overflow-x: scroll;
+}
 input[type=text], select {
   padding: 12px 20px;
   margin: 8px 0;
