@@ -16,7 +16,7 @@ app.get('/api/getlogs', function (request, response) {
         response.send({ logs: data });
     });
 });
-app.post('/api/getcurrenttime', function (request, response) {
+app.get('/api/getcurrenttime', function (request, response) {
     var date = new Date().toLocaleTimeString();
     // log(`Current time is ${date}`, fileName);
     customLogger.info(date);

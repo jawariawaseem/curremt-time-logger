@@ -9,6 +9,7 @@ const GetArray = () => {
 	var formattedArray = array.toString();
 
 	const getLargestValue = (array) => {
+		array = [-2,-1,-4,-6,-3,-7]
 		let largest = array[0];
 		let secondLargest = array[0];
 		for(var i=0; i<array.length; i++){

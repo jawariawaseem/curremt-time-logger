@@ -16,9 +16,9 @@ const App = () => {
   });
 
   const callApi = async () => {
+    console.log('test');
     const response = await fetch('/api/getlogs');
-    const body = response.json();
-
+    const body = await response.json();
     if(response.status !== 200) throw Error(body.message);
     return body;
   }
@@ -29,6 +29,7 @@ const App = () => {
       headers:{'Content-Type':'Application/json'},
     });
     const body = await response.json();
+    // console.log(response);
     setResponseToPost(body.date);
   }
 
@@ -37,7 +38,7 @@ const App = () => {
     <div>
         <h3>Logs</h3>
       <div className="logger" id="logger">
-        <p>{response.split("\n")}</p>
+        <p>{response}</p>
       </div>
       <div className="content">
         <div className="time">
